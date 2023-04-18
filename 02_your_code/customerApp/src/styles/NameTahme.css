@@ -1,0 +1,99 @@
+
+.dropdown label.dropdown--label {
+    position: relative;
+    height: 45px;
+    width: 350px;
+    line-height: 46px;
+    display: inline-block;
+}
+.dropdown label.dropdown--label .dropdown--checkbox {
+    position: absolute;
+    left: -2000000px;
+}
+.dropdown label.dropdown--label .dropdown--text {
+    cursor: pointer;
+    border: 2px solid #dee5ff;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    background: #fff;
+    color: #1f1c2e;
+    font-weight: bold;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.dropdown label.dropdown--label .dropdown--text .dropdown--arrow {
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #616d90;
+    border-bottom: 2px solid #616d90;
+    margin-left: auto;
+    transform: rotate(45deg);
+    transition: all ease-in 0.3s;
+    position: relative;
+    top: -2px;
+}
+.dropdown label.dropdown--label .dropdown--list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    top: 50%;
+    transition: all ease-out 0.3s;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+.dropdown label.dropdown--label .dropdown--list::-webkit-scrollbar {
+    width: 10px;
+}
+
+.dropdown label.dropdown--label .dropdown--list::-webkit-scrollbar-thumb {
+    background: #dee5ff;
+    border-radius: 5px;
+}
+.dropdown label.dropdown--label .dropdown--list::-webkit-scrollbar-thumb:hover {
+    background: #cfd8f7;
+}
+.dropdown label.dropdown--label .dropdown--list ul {
+    padding: 0;
+    margin: 0;
+}
+.dropdown label.dropdown--label .dropdown--list ul li a {
+    white-space: nowrap;
+    text-decoration: none;
+    color: #333a52;
+    display: block;
+    padding: 5px 20px;
+}
+.dropdown label.dropdown--label .dropdown--list ul li a:hover {
+    background: #f7f9fd;
+}
+.dropdown label.dropdown--label .dropdown--checkbox:checked ~ .dropdown--list {
+    top: 120%;
+    opacity: 1;
+    visibility: visible;
+    transition: all ease-in 0.3s;
+}
+.dropdown label.dropdown--label .dropdown--checkbox:checked ~ .dropdown--text .dropdown--arrow {
+    transform: rotate(-135deg);
+    top: 5px;
+}
+.link {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.link a {
+    color: #1f1c2e;
+    text-decoration: none;
+    font-weight: bold;
+}

@@ -1,0 +1,98 @@
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    outline: none;
+}
+
+p {
+    text-align: center;
+    color: #1f1c2e;
+    font-size: 13px;
+}
+a:hover, a:visited, a:link {
+    color: rgba(255, 255, 255, 0.6);
+}
+.register {
+    margin: 0 auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.field {
+    width: 385px;
+    height: 46px;
+    position: relative;
+}
+.field input {
+    width: 100%;
+    border-radius: 6px;
+    height: 70px;
+    border: 0;
+    padding: 10px;
+    padding: 20px 0 0 16px;
+    font-size: 0;
+    background: #fff;
+    transition: background 0.3s ease;
+    color: #1f1c2e;
+}
+.field input:focus {
+    background: #1f1c2e;
+    font-size: 23px;
+}
+.field input:focus::selection {
+    background: rgba(188, 232, 255, 0.5);
+}
+.field input.active {
+    background: #065cb7;
+    font-size: 23px;
+}
+.field input, .field button {
+    position: absolute;
+    height: 50px;
+}
+.field button {
+    background: #fff;
+    right: 0;
+    border: 0;
+    width: 115px;
+    border-radius: 6px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: width 0.3s ease, background 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    color: #1f1c2e;
+    text-transform: uppercae;
+    pointer-events: none;
+}
+.field button.active {
+    color: #fff;
+    background: #639edb;
+    opacity: 1;
+    pointer-events: auto;
+}
+.field button.active:hover {
+    background: #5e99d6;
+}
+.field button.full {
+    width: 100%;
+}
+.field input:focus + label {
+    font-size: 19px;
+    transform: translate(16px, 11px);
+    color: rgba(255, 255, 255, 0.7);
+}
+.field label {
+    position: absolute;
+    color: #1f1c2e;
+    transform: translate(16px, 20px);
+    transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s 0.1s ease;
+    font-size: 20px;
+}
+.field label.active {
+    font-size: 19px;
+    transform: translate(16px, 11px);
+    color: rgba(255, 255, 255, 0.7);
+}
+.field input:focus + label + button {
+    opacity: 1;
+}
